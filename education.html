@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <title>Ronin Multi</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="vendors/linericon/style.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css" />
+    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css" />
+    <link rel="stylesheet" href="vendors/animate-css/animate.css" />
+    <link rel="stylesheet" href="vendors/flaticon/flaticon.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <style>
+      .card {
+        border: none; /* Menghapus border default */
+        border-radius: 15px; /* Menambahkan sudut melengkung */
+        overflow: hidden; /* Pastikan elemen tidak keluar dari card */
+        /* Warna latar belakang */
+      }
+
+      .card-body {
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      h5 {
+        font-weight: bold;
+        color: #333;
+      }
+      .animate-card {
+        animation: fadeIn 1s ease-in-out;
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Image animation */
+      .animate-image {
+        animation: scaleUp 1.5s ease-in-out;
+        border-radius: 15px;
+      }
+
+      /* Text animation */
+      .animate-text {
+        font-weight: bold;
+        color: #333;
+        animation: slideUp 1.2s ease-in-out;
+      }
+
+      /* Keyframes */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes scaleUp {
+        from {
+          transform: scale(1.2);
+          opacity: 0.8;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideUp {
+        from {
+          transform: translateY(20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      .feature_item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        min-height: 840px;
+        flex: 1;
+        padding: 15px;
+        box-sizing: border-box;
+      }
+      .feature_item:nth-child(1) {
+        animation-delay: 0.3s;
+      }
+
+      .feature_item:nth-child(2) {
+        animation-delay: 0.6s;
+      }
+
+      .feature_item:nth-child(3) {
+        animation-delay: 0.9s;
+      }
+      .section-header {
+        font-size: 2.5rem;
+        color: #007bff;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 15px;
+
+        color: transparent;
+        animation: fadeInUp 1s ease-out;
+      }
+
+      /* Gaya untuk sub-text */
+      .section-subtext {
+        font-size: 1.2rem;
+        color: #555;
+        font-style: italic;
+        margin-bottom: 20px;
+      }
+
+      /* Tambah bayang untuk teks */
+      .section-header,
+      .section-subtext {
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+      }
+      .testi_item {
+        animation: fadeInUp 0.8s ease-in-out forwards;
+      }
+      .button-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .btn {
+        width: 48%; /* Adjust button width */
+      }
+      .button-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .btn {
+        width: 30%;
+        background-color: #0a055b;
+        color: white;
+        border: none;
+        padding: 1px 20px;
+        font-size: 16px;
+        border-radius: 30px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        margin-top: 10px;
+      }
+
+      .btn:hover {
+        background-color: #0056b3;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
+      }
+
+      .btn:focus {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!--================Header Menu Area =================-->
+    <header class="header_area">
+      <div class="main_menu" id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container box_1620">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a class="navbar-brand logo_h" href="index.html"
+              ><img src="img/logo_1.png" alt=""
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div
+              class="collapse navbar-collapse offset"
+              id="navbarSupportedContent">
+              <ul class="nav navbar-nav menu_nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Education.html">Education</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="experiance.html">Experience</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="achievements.html">Achievements</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="skill.html">Skill</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!--================Header Menu Area =================-->
+
+    <!--================Welcome Area =================-->
+    <section class="welcome_area p_120">
+      <div class="container">
+        <!-- Header Section -->
+        <div class="text-center mb-4">
+          <h2
+            class="section-header animate-text"
+            style="font-weight: bold; color: #333"
+          >
+            EDUCATION
+          </h2>
+          <p
+            class="section-subtext"
+            style="color: #555; font-size: 1rem; opacity: 0.8"
+          >
+            A brief insight into my academic achievements and journey.
+          </p>
+        </div>
+
+        <!-- Card Section -->
+        <div
+          class="card text-center shadow animate-card"
+          style="max-width: 400px; margin: 0 auto"
+        >
+          <div class="card-body p-3">
+            <img
+              src="img/Gmbr_1.JPG"
+              alt="Welcome Image"
+              class="img-fluid rounded animate-image"
+              style="max-height: 600px; object-fit: cover"
+            />
+            <h5 class="name-title animate-text pt-3">
+              MUHAMMAD QIWAMUDDIN ABQARI BIN NOREFENDI
+            </h5>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--================End Welcome Area =================-->
+
+    <!--================Feature Area =================-->
+    <section class="feature_area p_120">
+      <div class="container">
+        <div class="main_title" data-aos="fade-up">
+          <h2>Academic History</h2>
+          <p>
+            Throughout my academic career, I have consistently demonstrated
+            dedication, academic excellence, and a genuine interest in the IT
+            field, which has prepared me for future challenges in this
+            ever-evolving industry.
+          </p>
+        </div>
+        <div class="feature_inner row">
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="feature_item">
+              <img
+                src="img/UTeM_icon.png"
+                alt="City Icon"
+                style="width: 120px; height: 150px; margin-bottom: 10px"
+              />
+              <div class="align-items text-center">
+                <h4 class="">UTeM</h4>
+              </div>
+              <h5 class="text-primary mb-2">2024 - Present</h5>
+              <p style="line-height: 1.6; color: #555">
+                I am currently pursuing my
+                <span class="text-primary">degree</span>, building upon the
+                solid foundation laid during my diploma studies. With a
+                commitment to academic excellence, I proudly earned a place on
+                the Dean's List in my very first semester. Driven by passion and
+                determination, I am dedicated to refining my skills, expanding
+                my knowledge, and achieving even greater success throughout my
+                degree journey.
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="feature_item">
+              <img
+                src="img/UTeM_icon.png"
+                alt="City Icon"
+                style="
+                  width: 120px;
+                  height: 150px;
+                  margin-bottom: 10px;
+                  margin-top: 50px;
+                "
+              />
+              <div class="align-items text-center">
+                <h4 class="">UTeM</h4>
+              </div>
+              <h5 class="text-primary">2021-2024</h5>
+              <p style="line-height: 1.6; color: #555">
+                During my <span class="text-primary">diploma </span>studies, I
+                developed a strong foundation in programming, mastering
+                languages such as C++, C#, Java, PHP and more I actively engaged
+                in programming-related events and competitions, including Code
+                Hunt and Service Learning Malaysia (SULAM). Alongside my
+                academic and programming pursuits, I was also actively involved
+                in sports, particularly marathon running, where I achieved
+                notable success, including winning the UTeM FICT Marathon.
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <div class="feature_item">
+              <img
+                src="img/SMKBSB_logo.png"
+                alt="City Icon"
+                style="
+                  width: 120px;
+                  height: 150px;
+                  margin-bottom: 10px;
+                  margin-top: 5px;
+                "
+              />
+              <div class="align-items text-center">
+                <h4 class="">SMKBSB</h4>
+              </div>
+              <h5 class="text-primary">2016-2020</h5>
+              <p style="line-height: 1.6; color: #555">
+                During my <span class="text-primary">secondary</span> school
+                years, I was placed in the Accounting class, where I focused on
+                subjects such as Accounting, Economics, Additional Mathematics,
+                and Geography. I was also active in school sports, representing
+                the school football team at the district level. My studies in
+                secondary school helped improve my understanding of both English
+                and Malay languages.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--================End Feature Area =================-->
+
+    <!--================Testimonials Area =================-->
+    <section class="testimonials_area testi_two p_120">
+      <div class="container">
+        <div class="main_title" data-aos="fade-up">
+          <h2>Grade</h2>
+          <p>
+            Below are the academic grades I have achieved at different stages of
+            my education journey.
+          </p>
+        </div>
+        <div class="testi_inner">
+          <div class="testi_slider owl-carousel">
+            <!-- Degree -->
+            <div class="item" data-aos="fade-right" data-aos-delay="200">
+              <div class="testi_item">
+                <h4>Degree - UTeM</h4>
+                <p><strong>CGPA:</strong> 3.53</p>
+                <p>
+                  I earned a CGPA of 3.53 during my degree studies,
+                  demonstrating academic excellence and dedication to my field
+                  of study.
+                </p>
+              </div>
+            </div>
+            <!-- Diploma -->
+            <div class="item" data-aos="fade-left" data-aos-delay="400">
+              <div class="testi_item">
+                <h4>Diploma - UTeM</h4>
+                <p><strong>GPA:</strong> 3.69</p>
+                <p>
+                  I earned a GPA of 3.69 during my diploma studies,
+                  demonstrating academic excellence and dedication to my field
+                  of study.
+                </p>
+              </div>
+            </div>
+            <!-- Secondary School -->
+            <div class="item" data-aos="fade-right" data-aos-delay="600">
+              <div class="testi_item">
+                <h4>Secondary School - SMKBSB</h4>
+                <p><strong>Results:</strong> 7A 1B+ 1B</p>
+                <p>
+                  During secondary school, I achieved excellent results with
+                  7A's, 1B+, and 1B, excelling in both academics and
+                  extracurricular activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center pt-4">
+          <div class="button-container">
+            <a href="index.html" class="btn btn-primary banner_btn">Previous</a>
+            <a href="experiance.html" class="btn btn-primary banner_btn">More</a>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!--================End Testimonials Area =================-->
+
+    <!--================Footer Area =================-->
+	<footer class="footer_area p_120">
+		<div class="container">
+		  <div class="row footer_inner">
+			<div class="col-lg-5 col-sm-6">
+			  <aside class="f_widget ab_widget">
+				<div class="f_title">
+				  <h3>About Me</h3>
+				</div>
+				<p>
+				  Do you want to be even more successful? Learn to love learning
+				  and growth. The more effort you put into improving your skills,
+				</p>
+				<p>
+				  Copyright &copy;
+				  <script>
+					document.write(new Date().getFullYear());
+				  </script>
+				  All rights reserved | by MUHAMMAD QIWAMUDDIN ABQARI BIN
+				  NOREFENDI B032320057
+				</p>
+			  </aside>
+			</div>
+			<div class="col-lg-5 col-sm-6">
+			  <aside class="f_widget news_widget">
+				<div class="f_title">
+				  <h3>Newsletter</h3>
+				</div>
+				<p>Stay in touch with me</p>
+				<div id="mc_embed_signup">
+				  <form
+					target="_blank"
+					action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+					method="get"
+					class="subscribe_form relative"
+				  >
+					<div class="input-group d-flex flex-row">
+					  <input
+						name="EMAIL"
+						placeholder="Enter email address"
+						onfocus="this.placeholder = ''"
+						onblur="this.placeholder = 'Email Address '"
+						required=""
+						type="email"
+					  />
+					  <button class="btn sub-btn">
+						<span class="lnr lnr-arrow-right"></span>
+					  </button>
+					</div>
+					<div class="mt-10 info"></div>
+				  </form>
+				</div>
+			  </aside>
+			</div>
+			<div class="col-lg-2">
+			  <aside class="f_widget social_widget">
+				<div class="f_title">
+				  <h3>Follow Me</h3>
+				</div>
+				<p>Let us be social</p>
+				<ul class="list">
+				  <li>
+					<a href="https://www.instagram.com"
+					  ><i class="fa fa-instagram"></i
+					></a>
+				  </li>
+				</ul>
+			  </aside>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+    <!--================End Footer Area =================-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/stellar.js"></script>
+    <script src="vendors/lightbox/simpleLightbox.min.js"></script>
+    <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="vendors/isotope/isotope-min.js"></script>
+    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendors/counter-up/jquery.counterup.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script>
+      AOS.init({
+        duration: 1200, // Durasi animasi (ms)
+      });
+    </script>
+  </body>
+</html>
